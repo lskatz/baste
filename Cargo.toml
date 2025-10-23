@@ -1,0 +1,25 @@
+[package]
+name = "baste"
+version = "0.1.0"
+edition = "2021"
+description = "TODO: short description"
+authors = ["Lee Katz <lskatz@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/lskatz/baste"
+# homepage = "https://your.project.homepage"
+# documentation = "https://docs.rs/baste"
+readme = "README.md"
+keywords = ["cli", "bam", "sam", "bioinformatics"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "baste_metrics"
+path = "src/bin/baste_metrics.rs"
+
+[[bin]]
+name = "baste_convert"
+path = "src/bin/baste_convert.rs"
+
+[dependencies]
+noodles = { version = "0.101.0", features = ["bam"] }
+getopts = '*'
