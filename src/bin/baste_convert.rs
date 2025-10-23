@@ -9,7 +9,7 @@ fn main() {
     let mut reader = bam::io::reader::Builder::default().build_from_path(&path).expect("error opening BAM file");
     let _header = reader.read_header().expect("error reading BAM header");
 
-    let matches = Options::new()
+    let _matches = Options::new()
         .optopt("o", "out-format", "output format (default: fastq)", "FORMAT")
         .parse(&std::env::args().collect::<Vec<String>>())
         .expect("error parsing command line options");
